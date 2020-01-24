@@ -1,53 +1,32 @@
-/* оператор || (OR) */
-false || true;
-console.log("false || true: ", false || true);
-false || true || false;
-console.log("false || true || false: ", false || true || false);
-false || false || false;
-console.log("false || false || false: ", false || false || false);
+if (true) console.log('I\'m in');
 
+if (false) {
+    console.log('I\'m not in');
+}
 
-/* оператор && (AND) */
-false && true;
-console.log("false && true: ", false && true);
-false && true && false;
-console.log("false && true && false: ", false && true && false);
-true && true && true;
-console.log("true && true && true: ", true && true && true);
+if ('text') {
+    console.log('Yes');
+}
 
+if (null) {
+    console.log('Yes');
+} else {
+    console.log('Else');
+}
 
-/* Логические операторы могут применятся к любым типам данных */
+let age = 18;
 
+if (age < 16) {
+    console.log('Too young');
+} else if (age >= 16 && age < 18) {
+    console.log('Almost ready');
+} else if (age >= 18 && age < 65) {
+    console.log('Ready');
+} else {
+    console.log('Else');
+}
 
-/* || находит первое истинное значение */
-'text' || false;
-console.log("'text' || false: ", 'text' || false);
-true || 'text';
-console.log("true || 'text': ", true || 'text');
-undefined || null || 0 || '' || null;
-console.log("undefined || null || 0 || '' || null: ", undefined || null || 0 || '' || null);
+// Тернаный оператор ? : ( const result = условие ? значение1 : значение2; )
 
-const customAmount = null; // не выводим
-const defaultAmount = 17; // не выводим
-const amount = customAmount || defaultAmount; // выводим значкние переменной amount в формате console.log('amount: ', amount);
-console.log("amount: ", amount);
-
-
-/* && находит первое ложное значение */
-'text' && false;
-console.log("'text' && false: ", 'text' && false);
-true && 'text';
-console.log("true && 'text': ", true && 'text');
-undefined && null && 0 && '' && null;
-console.log("undefined && null && 0 && '' && null: ", undefined && null && 0 && '' && null);
-
-
-/* оператор отрицания (OR) */
-!true;
-console.log("!true: ", !true);
-!false;
-console.log("!false: ", !false);
-!'text';
-console.log("!'text': ", !'text');
-!!'text';
-console.log("!!'text': ", !!'text');
+let amount = 16;
+const result = amount > 17 ? 'full' : 'empty';
