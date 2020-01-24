@@ -1,11 +1,11 @@
 // To string
 
-console.log("17 to string in " + String(17));
-console.log("-17.17 to string in " + String(-17.17));
-console.log("false to string in " + String(false));
-console.log("null to string in " + String(null));
-console.log("undefined to string in " + String(undefined));
-console.log("0 to string in " + String(0));
+console.log("17 to string is " + String(17));
+console.log("-17.17 to string is " + String(-17.17));
+console.log("false to string is " + String(false));
+console.log("null to string is " + String(null));
+console.log("undefined to string is " + String(undefined));
+console.log("0 to string is " + String(0));
 
 // To number
 
@@ -14,9 +14,9 @@ console.log("true to number is " + Number(true));
 console.log("false to number is " + Number(false));
 console.log("null to number is " + Number(null));
 console.log("undefined to number is " + Number(undefined));
-console.log("' 20 ' to number is " + Number(' 20 '));
-console.log("' ' to number is " + Number(' '));
-console.log("' 30d ' to number is " + Number(' 30d '));
+console.log("'  20  ' to number is " + Number(' 20 '));
+console.log("'  ' to number is " + Number(' '));
+console.log("'  30d  ' to number is " + Number(' 30d '));
 
 // To boolean
 
