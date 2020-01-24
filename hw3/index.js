@@ -1,6 +1,6 @@
 /* оператор || (OR) */
 false || true;
-console.log("false || true;: ", false || true);
+console.log("false || true: ", false || true);
 false || true || false;
 console.log("false || true || false: ", false || true || false);
 false || false || false;
