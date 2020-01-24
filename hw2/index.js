@@ -1,15 +1,10 @@
-let goodNumber = 17;
-let anotherNumber = goodNumber;
+let a = 4;
+let b = 2;
 
-anotherNumber = 77;
+console.log('a: ', a);
+console.log('b: ', b);
 
-console.log(goodNumber);
-console.log(anotherNumber);
-
-let customer = {name: 'John', age: 17};
-let anotherCustomer = customer;
-
-anotherCustomer.age = 20;
-
-console.log(customer.age);
-console.log(anotherCustomer.age);
+console.log('a - b', a - b);
+console.log('a + b', a + b);
+console.log('a / b', a / b);
+console.log('a * b', a * b);
