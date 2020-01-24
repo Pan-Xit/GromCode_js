@@ -1,58 +1,31 @@
-// Унарный плюс приводит операнд к числу
-+17;
-console.log("+17: ", +17);
-+'77';
-console.log("+'77': ", +'77');
+// To string
 
-// Бинарный плюс складывает строки или прибавляет числа
-10 + '5';
-console.log("10 + '5': ", 10 + '5');
-'some' + 'text';
-console.log("'some' + 'text': ", 'some' + 'text');
+console.log("17 to string in " + String(17));
+console.log("-17.17 to string in " + String(-17.17));
+console.log("false to string in " + String(false));
+console.log("null to string in " + String(null));
+console.log("undefined to string in " + String(undefined));
+console.log("0 to string in " + String(0));
 
-// Математические операции с undefined возвращают NaN
-undefined + 1;
-console.log("undefined + 1: ", undefined + 1);
-null + 8;
-console.log("null + 8: ", null + 8);
-undefined + '5';
-console.log("undefined + '5': ", undefined + '5');
-7 - null;
-console.log("7 - null: ", 7 - null);
-5 - undefined;
-console.log("5 - undefined: ", 5 - undefined);
-'text' + null;
-console.log("'text' + null: ", 'text' + null);
-let num = 17;
+// To number
 
-// Постфиксная и префиксная форма записи
-console.log("++num: ", ++num);
-console.log("num++: ", num++);
+console.log("'17' to number is " + Number('17'));
+console.log("true to number is " + Number(true));
+console.log("false to number is " + Number(false));
+console.log("null to number is " + Number(null));
+console.log("undefined to number is " + Number(undefined));
+console.log("' 20 ' to number is " + Number(' 20 '));
+console.log("' ' to number is " + Number(' '));
+console.log("' 30d ' to number is " + Number(' 30d '));
 
+// To boolean
 
-// математические операторы приводят операнды к числам
-const a = 17;
-const b = -a;
-'24' / 4;
-console.log("'24' / 4: ", '24' / 4);
-18 * '3';
-console.log("18 * '3': ", 18 * '3');
-'9' - '3';
-console.log("'9' - '3': ", '9' - '3');
-'seventeen' / 3;
-console.log("'seventeen' / 3: ", 'seventeen' / 3);
-4 * 'four';
-console.log("4 * 'four': ", 4 * 'four');
-17 / 0;
-console.log("17 / 0: ", 17 / 0);
-
-10 + 'seven';
-console.log("10 + 'seven': ", 10 + 'seven');
-undefined + 1;
-console.log("undefined + 1: ", undefined + 1);
-null + 8;
-console.log("null + 8: ", null + 8);
-undefined + '5';
-console.log("undefined + '5': ", undefined + '5');
-'text' + null;
-console.log("'text' + null: ", 'text' + null);
+console.log("null to boolean is " + Boolean(null));
+console.log("undefined to boolean is " + Boolean(undefined));
+console.log("0 to boolean is " + Boolean(0));
+console.log("-0 to boolean is " + Boolean(-0));
+console.log("NaN to boolean is " + Boolean(NaN));
+console.log("'' to boolean is " + Boolean(''));
+console.log("' ' to boolean is " + Boolean(' '));
+console.log("17 to boolean is " + Boolean(17));
+console.log("'Hello' to boolean is " + Boolean('Hello'));
