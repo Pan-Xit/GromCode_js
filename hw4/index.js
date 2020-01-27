@@ -1,11 +1,6 @@
-const n = 42;
-const m = 11;
-let result = 1;
-
-for (let i = m; i <= n; i++) {
-    if (i % 2 != 0) {
-        result *= i
+for (let x = 1; x <= 5; x++) {
+    console.log(`=> ${x} <=`)
+    for (let y = 0; y <=10; y++) {
+        console.log(`${x} x ${y} = ` + x * y)
     }
-};
-
-console.log('Result: ' + result)
+}
