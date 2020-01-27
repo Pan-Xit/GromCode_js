@@ -1,1 +1,1 @@
-const sayHi = (name) => `Hi, ${name}`
+const sayHi = (name) => console.log(`Hi, ${name}`)
