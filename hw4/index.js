@@ -1,8 +1,16 @@
-const n = 11;
-let sum = '';
+const m = 11;
+const n = 42;
+let result = 0;
 
-for (let i = 1; i <= n; i++) {
-    sum += i;
+for (let i = m; i <= n; i++) {
+    if (i % 5 == 0) {
+        console.log(i)
+        continue
+    } else if (i % 4 == 0) {
+        result *= i
+    } else if (i % 3 == 0) {
+        result -= i
+    } else if (i % 2 == 0) {
+        result += i
+    }
 }
-
-console.log(sum)
