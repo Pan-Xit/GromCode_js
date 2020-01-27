@@ -1,9 +1,9 @@
-const m = 0;
+const m = 1;
 const n = 20;
 let result = 0;
 
 for (let i = m; i <= n; i++) {
-    console.log(i)
+    // console.log(i)
     if (i % 5 == 0) {
         console.log(i)
     }
