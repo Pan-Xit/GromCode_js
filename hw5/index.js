@@ -1,1 +1,1 @@
-const sum = (a, b) => a + b
+const sayHi = (name) => `Hi, ${name}`
