@@ -1,2 +1,2 @@
-const getSpecialNumbers = (array) => 
-    array.filter(element => element % 3 === 0);
+const sortDesc = array =>
+    array.slice().sort((a, b) => b - a)
