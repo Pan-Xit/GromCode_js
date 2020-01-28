@@ -3,8 +3,8 @@ const reverseArray = (arr) => {
         return null
     }
     let newArr = [];
-    for (element of arr) {
-        newArr.unshift(element)
+    for (let i = 0; i < arr.length; i++) {
+        newArr.unshift(arr[i])
     }
     return newArr
 }
