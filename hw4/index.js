@@ -1,15 +1,9 @@
-const checker = (arr) => {
-    let minElement = Infinity;
-    let maxElement = -Infinity;
-
-    for (let element of arr) {
-        if (element > maxElement) {
-            maxElement = element;
-        }
-        if (element < minElement) {
-            minElement = element;
-        }
+const cloneArr = (arr) => {
+    // let newArr = arr.slice()
+    let newArr = [];
+    for (element of arr) {
+        newArr.push(element)
     }
 
-    return minElement + maxElement > 1000
+    return newArr
 }
