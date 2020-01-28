@@ -1,2 +1,3 @@
-const sortDesc = array =>
-    array.slice().sort((a, b) => b - a)
+const getMessagesForBestStudents = (allStudents, failedStudents) => 
+    allStudents.filter(name => !failedStudents.includes(name))
+    .map(name => 'Good job ' + name);
