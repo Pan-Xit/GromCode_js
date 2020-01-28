@@ -1,18 +1,15 @@
-const withdraw = (clients, balances, client, amount) => {
-    if (!clients.includes(client)) {
-        return "Wrong client name"
-    }
-    // let clientIndex = clients.indexOf(client);
-    let clientIndex = 0;
-    for (clientIndex; clientIndex < clients.length; clientIndex++) {
-        if (client === clients[clientIndex]) {
-            break
+const checker = (arr) => {
+    let minElement = Infinity;
+    let maxElement = -Infinity;
+
+    for (let element of arr) {
+        if (element > maxElement) {
+            maxElement = element;
+        }
+        if (element < minElement) {
+            minElement = element;
         }
     }
-    if (amount > balances[clientIndex]) {
-        return -1
-    }
-    balances[clientIndex] -= amount;
 
-    return balances[clientIndex]
+    return minElement + maxElement > 1000
 }
