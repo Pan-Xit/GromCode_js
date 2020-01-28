@@ -1,10 +1,8 @@
-const getSum = (obj) => {
-    if (!Array.isArray(obj)) {
-        return null
+const getSpecialNumbers = (m, n) => {
+    let specialNumbers = [];
+    for (let i = m; i <= n; i++) {
+        if (i % 3 === 0) {
+            specialNumbers.push(i)
+        }
     }
-    let sum = 0;
-    for (let element of obj) {
-        sum += element
-    }
-    return sum
 }
