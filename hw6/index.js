@@ -5,4 +5,5 @@ const getSpecialNumbers = (m, n) => {
             specialNumbers.push(i)
         }
     }
+    return specialNumbers
 }
