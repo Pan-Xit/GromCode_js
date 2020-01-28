@@ -4,7 +4,7 @@ const squareArray = (arr) => {
     };
 
     let newArr = [];
-    for (i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         newArr.push(arr[i] * arr[i])
     };
     return newArr;
