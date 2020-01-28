@@ -1,9 +1,10 @@
-const findDivCount = (a, b, n) => {
-    let amountOfNumbers = 0;
-    for (let i = a; i <= b; i++) {
-        if (i % n === 0) {
-            amountOfNumbers += 1
-        }
+const reverseArray = (arr) => {
+    if (!Array.isArray(arr)) {
+        return null
     }
-    return amountOfNumbers
+    let newArr = [];
+    for (element of arr) {
+        newArr.unshift(element)
+    }
+    return newArr
 }
