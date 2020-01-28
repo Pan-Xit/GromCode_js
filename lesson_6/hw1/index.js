@@ -4,8 +4,8 @@ const squareArray = (arr) => {
     };
 
     let newArr = [];
-    for (element of arr) {
-        newArr.push(element * element)
+    for (i = 0; i < arr.length; i++) {
+        newArr.push(arr[i] * arr[i])
     };
     return newArr;
 }
