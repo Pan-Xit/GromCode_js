@@ -1,4 +1,4 @@
-const uniqueCount = (arr) => {
+const removeDuplicates = (arr) => {
     if (!Array.isArray(arr)) {
         return null
     }
@@ -18,5 +18,5 @@ const uniqueCount = (arr) => {
         }
     }
 
-    return uniqueElements.length
+    return uniqueElements
 }
