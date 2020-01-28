@@ -1,21 +1,41 @@
-const m = 1;
-const n = 20;
-let result = 0;
+const sortAsc = (arr) => {
+    if (!Array.isArray(arr)) {
+        return null
+    }
+    let next_iteration;
+    do {
+        next_iteration = false;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i-1] > arr[i]) {
+                let temp = arr[i-1];
+                arr[i-1] = arr[i];
+                arr[i] = temp;
 
-for (let i = m; i <= n; i++) {
-    // console.log(i)
-    if (i % 5 == 0) {
-        console.log(i)
+                next_iteration = true;
+            };
+        };
+    } while (next_iteration);
+
+    return arr
+};
+
+const sortDesc = (arr) => {
+    if (!Array.isArray(arr)) {
+        return null
     }
-    if (i % 2 == 0 && i % 4 != 0) {
-        // console.log('sum')
-        result += i;
-    } else if (i % 3 == 0) {
-        // console.log('sub')
-        result -= i
-    } else if (i % 4 == 0) {
-        // console.log('mul')
-        result *= i;
-    }
-    // console.log(`Result: `, result)
+    let next_iteration;
+    do {
+        next_iteration = false;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i-1] < arr[i]) {
+                let temp = arr[i-1];
+                arr[i-1] = arr[i];
+                arr[i] = temp;
+
+                next_iteration = true;
+            };
+        };
+    } while (next_iteration);
+
+    return arr
 }
