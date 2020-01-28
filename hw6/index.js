@@ -1,4 +1,4 @@
-const getArrayBound = (obj) => {
+const getArrayBounds = (obj) => {
     if (!Array.isArray(obj)) {
         return null
     }
