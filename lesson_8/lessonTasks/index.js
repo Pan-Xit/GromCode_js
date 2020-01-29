@@ -1,10 +1,9 @@
-const transformToObject = array => {
-    if (!Array.isArray(array)) {
-        return null
+const concatProps = obj => {
+    const array = [];
+
+    for (let key in obj) {
+        array.push(obj[key])
     }
-    const newObj = {};
 
-    array.forEach(key => newObj[key] = key)
-
-    return newObj
+    return array
 }
