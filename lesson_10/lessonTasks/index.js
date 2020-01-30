@@ -1,14 +1,11 @@
-const getFiniteNumbers = array => array
-    .filter(element => Number.isFinite(element))
+const getParsedIntegers = array => array
+    .map(element => Number.parseInt(element))
 
-const getFiniteNumbersV2 = array => array
-    .filter(element => isFinite(element))
+const getParsedIntegersV2 = array => array
+    .map(element => parseInt(element))
 
-const getNaN = array => array
-    .filter(element => Number.isNaN(element))
+const getParsedFloats = array => array
+    .map(element => Number.parseFloat(element))
 
-const getNaNV2 = array => array
-    .filter(element => isNaN(element))
-
-const getIntegers = array => array
-    .filter(element => Number.isInteger(element))
+const getParsedFloatsV2 = array => array
+.map(element => parseFloat(element))
