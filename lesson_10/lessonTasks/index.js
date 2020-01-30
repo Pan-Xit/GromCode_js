@@ -1,9 +1,7 @@
-const getMaxAbsoluteNumber = numbersArray => {
-    if (!Array.isArray(numbersArray) || numbersArray.length === 0) {
-        return null
-    }
-
-    const absNumbersArray = numbersArray.map(element => Math.abs(element))
-
-    return Math.max(...absNumbersArray)
-}
+const multiRound = floatNumber => [
+    Math.floor(floatNumber * 100) / 100, 
+    Math.round(floatNumber * 100) / 100, 
+    Math.ceil(floatNumber * 100) / 100, 
+    Math.trunc(floatNumber * 100) / 100, 
+    +floatNumber.toFixed(2),
+]
