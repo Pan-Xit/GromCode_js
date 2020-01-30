@@ -1,5 +1,5 @@
 const superRound = (floatNumber, accurancyValue) => {
-    const accurancy10 = 10 * accurancyValue;
+    const accurancy10 = 10 ** accurancyValue;
 
     return [
         Math.floor(floatNumber * accurancy10) / accurancy10,
