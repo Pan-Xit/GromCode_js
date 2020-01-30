@@ -1,4 +1,10 @@
 const getRandomNumbers = (intNumber, firstNumber, secondNumber) => {
+    if (secondNumber > firstNumber) {
+        return null
+    } else if (Math.ceil(firstNumber) - Math.floor(secondNumber) === 0) {
+        return null
+    }
+
     const randomNumbers = [];
 
     for (let i = 0; i < intNumber; i++) {
