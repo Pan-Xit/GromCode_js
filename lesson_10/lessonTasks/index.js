@@ -1,5 +1,5 @@
 const getMaxAbsoluteNumber = numbersArray => {
-    if (!Array.isArray(numbersArray)) {
+    if (!Array.isArray(numbersArray) || numbersArray.length === 0) {
         return null
     }
 
