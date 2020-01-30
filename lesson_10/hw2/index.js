@@ -1,7 +1,7 @@
 const getRandomNumbers = (intNumber, firstNumber, secondNumber) => {
     if (secondNumber > firstNumber) {
         return null
-    } else if (Math.ceil(firstNumber) - Math.floor(secondNumber) === 0) {
+    } else if (Math.floor(firstNumber) - Math.floor(secondNumber) === 0) {
         return null
     }
 
