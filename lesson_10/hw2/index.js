@@ -1,5 +1,5 @@
 const getRandomNumbers = (intNumber, firstNumber, secondNumber) => {
-    if (secondNumber > firstNumber) {
+    if (secondNumber < firstNumber) {
         return null
     } else if (Math.floor(firstNumber) - Math.floor(secondNumber) === 0) {
         return null
