@@ -2,17 +2,17 @@ const splitText = (text, len=10) => {
     if (typeof text !== 'string') {
         return null
     }
-    let resultString = '';
+    const strArr = [];
     let startPosition = 0;
-    
+
     while (true) {
         let chunk = text.substr(startPosition, len);
-        if (!chunk) {
-            break
+        if (chunk.length === 0) {
+            break;
         }
-
-        resultString += chunk[0].toUpperCase() + chunk.slice(1, ) + '\n'
-        startPosition += len
+        strArr.push(chunk[0].toUpperCase() + chunk.slice(1, ))
+        startPosition += len;
     }
-    return resultString
+
+    return strArr.join('\n');
 }
