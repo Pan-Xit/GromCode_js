@@ -1,4 +1,4 @@
-const reverseArray = array => {
+export const reverseArray = array => {
     if (!Array.isArray(array)) {
         return null
     };

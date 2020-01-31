@@ -1,4 +1,4 @@
-const pickProps = (obj, array) => {
+export const pickProps = (obj, array) => {
     const newObjWithPicketProps = {};
 
     array.forEach(element => {
