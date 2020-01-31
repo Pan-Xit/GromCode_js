@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Pan-Xit/GromCode_js/issues"
   },
-  "homepage": "https://github.com/Pan-Xit/GromCode_js#readme"
+  "homepage": "https://github.com/Pan-Xit/GromCode_js#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4"
+  }
 }

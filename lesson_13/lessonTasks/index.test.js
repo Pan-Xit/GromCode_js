@@ -1,17 +1,21 @@
-// simple tests
+import getSum, { getSquaredArray, getOddNumbers } from './calculator.js'
 
-it('17 equel to 17', () => {
-    expect(17).toEqual(17);
+
+it('should return array with squared elements', () => {
+    const testArray = [1, 2, 3];
+
+    expect(getSquaredArray(testArray)).toEqual([1, 4, 9]);
 });
 
-it('18 not equal to 17', () => {
-    expect(18).not.toEqual(17)
+it('should return array with only odd numbers', () => {
+    const testArray = [1, 2, 3, 4, 5];
+
+    expect(getOddNumbers(testArray)).toEqual([1, 3, 5]);
 });
 
-const getEvenNumbers = numbersArray => numbersArray.slice().filter(element => element % 2 === 0)
+it('should return sum of two arguments', () => {
+    const a = 4,
+        b = 5;
 
-it('shoult return only even numbers', () => {
-    const testArray = [1, 2, 3, 4, 5, 6]
-    expect(getEvenNumbers(testArray)).toEqual([2, 4, 6])
-})
-
+    expect(getSum(a, b)).toEqual(9);
+});
