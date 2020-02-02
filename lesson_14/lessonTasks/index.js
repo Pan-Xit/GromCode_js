@@ -1,8 +1,6 @@
-
-let message = 'Just learn it!'
-
 export const sendMessage = (name) => {
     const sender = 'GromCode';
+    let message = 'Just learn it!';
 
     return (`${name}, ${message}! Your ${sender}`)
 }
