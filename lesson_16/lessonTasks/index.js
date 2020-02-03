@@ -1,11 +1,9 @@
-let a = 17;
+let arr = [];
 
-if (a) {
-
-    let a = 1;
-
-    console.log(a);
-    
+for(let i = 0; i < 10; i++) {
+    arr[i] = function() {
+        return i;
+    }
 }
 
-console.log(a);
+export { arr };
