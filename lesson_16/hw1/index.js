@@ -1,6 +1,8 @@
 export const createArrayOfFunctions = (integerNumber) => {
     if (typeof integerNumber !== 'number') {
         return null
+    } else if (!integerNumber) {
+        return []
     }
 
     let resultArray = [];
