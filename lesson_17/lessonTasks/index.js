@@ -1,14 +1,25 @@
-export const callbackPrompt = {
-    message: 'Tell me your number',
-
-    showPrompt() {
-        const phoneNumber = prompt(this.message);
-        console.log(phoneNumber);
-    },
-
-    showDeferredPrompt(ms) {
-        setTimeout(this.showPrompt.bind(this), ms)
+const defer = (func, ms) => {
+    return function() {
+        setTimeout(() => func.call(this, ...arguments), ms)
     }
 }
 
-callbackPrompt.showDeferredPrompt(1000)
+// const sayHi = (name) => {
+//     console.log(`Hi, ${name}`)
+// }
+
+// const deferSayHi = defer(sayHi, 1000);
+
+// deferSayHi('Tom')
+
+// const user = {
+//     name: 'Bob',
+
+//     sayHi() {
+//         console.log('Hello,', this.name)
+//     }
+// }
+
+// const deferUserSayHi = defer(user.sayHi, 1000)
+
+// deferUserSayHi.call(user)
