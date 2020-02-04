@@ -1,8 +1,14 @@
-export const user = {
-    firstName: 'John',
-    lastName: 'Doe',
+export const callbackPrompt = {
+    message: 'Tell me your number',
 
-    getFullName() {
-        return (`${this.firstName} ${this.lastName}`)
+    showPrompt() {
+        const phoneNumber = prompt(this.message);
+        console.log(phoneNumber);
+    },
+
+    showDeferredPrompt(ms) {
+        setTimeout(this.showPrompt.bind(this), ms)
     }
 }
+
+callbackPrompt.showDeferredPrompt(1000)
