@@ -1,24 +1,24 @@
-export function User(name, age) {
-    this.name = name;
-    this.age = age;
-}
+// export const user = {
+//     firstName: 'John',
+//     lastName: 'Doe',
 
-User.prototype.sayHi = function() {
-    console.log(`Hi, I am ${this.name}`)
-}
+//     get fullName() {
+//         return `${this.firstName} ${this.lastName}`
+//     },
 
-User.prototype.requestNewPhoto = function() {
-    console.log(`New photo request was sent for ${this.name}`)
-}
+//     set fullName(name) {
+//         const [firstName, lastName] = name.split(' ');
 
-User.prototype.setAge = function(age) {
-    if (age < 0) {
-        return false;
-    }
-    if (age >= 25) {
-        console.log(`New photo request was sent for ${this.name}`)
-    }
-    this.age = age;
+//         if (!firstName || !lastName) {
+//             return 'Wrong name format, should be "Name Surname"'
+//         }
 
-    return age
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+// }
+
+export function user(firstName = 'John', lastName = 'Doe') {
+    this.firstName = firstName;
+    this.lastName = lastName;
 }
