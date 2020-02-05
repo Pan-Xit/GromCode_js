@@ -1,14 +1,9 @@
-export const event = {
-    message: 'Welcome to the party!',
-    guests: [
-        { name: 'John', age: 18, email: 'example@server.com', },
-    ],
-    getInvitations() {
-        return this.guests.filter(({ age }) => age >= 18).map(({ name, email }) => {
-            return {
-                email,
-                message: `Dear ${name}! ${this.message}`
-            }
-        });
+export const wallet = {
+    transactions: [1, 2, 11, 42],
+    getMax() {
+        return Math.max(...this.transactions)
+    },
+    getMin() {
+        return Math.min(...this.transactions)
     },
 }
