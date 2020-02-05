@@ -1,15 +1,24 @@
-export const user = {
-    firstName: 'John',
-    lastName: 'Doe',
+export function User(name, age) {
+    this.name = name;
+    this.age = age;
+}
 
-    get fullName() {
-        return `${this.firstName} ${this.lastName}`
-    },
+User.prototype.sayHi = function() {
+    console.log(`Hi, I am ${this.name}`)
+}
 
-    set fullName(name) {
-        const [firstName, lastName] = name.split(' ');
+User.prototype.requestNewPhoto = function() {
+    console.log(`New photo request was sent for ${this.name}`)
+}
 
-        this.firstName = firstName;
-        this.lastName = lastName;
+User.prototype.setAge = function(age) {
+    if (age < 0) {
+        return false;
     }
+    if (age >= 25) {
+        console.log(`New photo request was sent for ${this.name}`)
+    }
+    this.age = age;
+
+    return age
 }
