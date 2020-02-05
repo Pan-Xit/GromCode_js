@@ -1,4 +1,4 @@
-export default user = {
+export default {
     firstName: 'John',
     lastName: 'Doe',
 
