@@ -1,4 +1,4 @@
-const event = {
+export const event = {
     message: 'Welcome to the party!',
     guests: [
         { 
