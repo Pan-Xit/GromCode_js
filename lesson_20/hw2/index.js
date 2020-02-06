@@ -43,8 +43,10 @@ export class UserRepository {
     }
 
     getUserNameById(id) {
-        return this.#users
+        const [userNameById] = this.#users
             .filter(userObj => userObj.id === id)
             .map(userObj => userObj.name)
+
+        return userNameById
     }
 }
