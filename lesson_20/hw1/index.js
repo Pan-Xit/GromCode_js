@@ -1,4 +1,4 @@
-export class Order {
+export default class Order {
     constructor(price, city, type) {
         this.id = Math.random().toString();
         this.price = price;
