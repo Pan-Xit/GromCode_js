@@ -20,6 +20,10 @@ export class User {
         }
         
         this.age = age;
+        return age
+    }
 
+    static createEmpty() {
+        return new User()
     }
 }
