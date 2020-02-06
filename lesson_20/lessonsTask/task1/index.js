@@ -24,6 +24,7 @@ export class User {
     }
 
     static createEmpty() {
-        return (new User())
+        const emptyUser = new User();
+        return emptyUser
     }
 }
