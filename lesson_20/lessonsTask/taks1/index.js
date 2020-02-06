@@ -24,6 +24,6 @@ export class User {
     }
 
     static createEmpty() {
-        return new User(null, null)
+        return new User
     }
 }
