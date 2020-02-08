@@ -1,0 +1,57 @@
+html {
+    font-family: Arial;
+    font-weight: 700;
+}
+
+.rect {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    border-radius: 8px;
+
+    &_div {
+        margin: 16px auto 0 auto;
+        width: 300px;
+        height: 300px;
+        background-color: coral;
+    }
+
+    &_p {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+    }
+
+    &_span {
+        width: 100px;
+        height: 100px;
+        background-color: wheat;
+    }
+
+    &__desc {
+        align-self: center;
+    }
+}
+
+.event-list {
+    display: flex;
+    align-items: center;;
+    margin: 16px;
+    height: 100px;
+    padding: 8px;
+    border: 3px solid #ccc;
+    border-radius: 8px;
+
+    & span:nth-child(n + 2) {
+        margin-left: 8px;
+    }
+}
+
+.btn {
+    border: 3px solid #ccc;
+    margin-left: 16px;
+    min-width: 64px;
+    height: 32px;
+    border-radius: 8px;
+}
