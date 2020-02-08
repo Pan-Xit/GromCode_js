@@ -32,29 +32,27 @@ function addListItemsOnPage(listItemsArray) {
         .slice()
         .sort((a, b) => ((a.done > b.done) - (b.done > a.done) || (a.date > b.date) - (b.date > a.date)))
         .map(( {text, done }) => {   
-        const listItemElem = createHtmlListItem(text, done)
+            const listItemElem = createHtmlListItem(text, done);
 
-        if (done) {
-            listItemElem.classList.add('list__item_selected')
-        }
-    
-        return listItemElem
-    })
+            if (done) {
+                listItemElem.classList.add('list__item_selected');
+            }
+        
+            return listItemElem;
+        });
 
     // Adding new list items on page
-    listElem.append(...listItemElems)
+    listElem.append(...listItemElems);
 
     // Adding EventListeners for new list elements
-    addListItemsEventListeners()
+    addListItemsEventListeners();
 }
 
 
 function addListItemsEventListeners() {
     const listItemCheckboxes = document.querySelectorAll('.list__item-checkbox');
 
-    for (let i = 0; i < listItemCheckboxes.length; i++) {
-        listItemCheckboxes[i].addEventListener('click', updateListItem.bind(null, listItems));
-    }
+    [...listItemCheckboxes].forEach(checkbox => checkbox.addEventListener('click', updateListItem.bind(null, listItems)))
 }
 
 
