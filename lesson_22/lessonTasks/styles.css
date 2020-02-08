@@ -29,7 +29,7 @@ html {
   align-self: center;
 }
 
-.event-list {
+.events-list {
   display: flex;
   align-items: center;
   margin: 16px;
@@ -38,7 +38,7 @@ html {
   border: 3px solid #ccc;
   border-radius: 8px;
 }
-.event-list span:nth-child(n+2) {
+.events-list span:nth-child(n+2) {
   margin-left: 8px;
 }
 
