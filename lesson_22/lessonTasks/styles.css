@@ -42,7 +42,7 @@ html {
   border: 3px solid #ccc;
   border-radius: 8px;
 }
-.events-list span:nth-child(n+2) {
+.events-list span {
   margin-left: 8px;
 }
 
