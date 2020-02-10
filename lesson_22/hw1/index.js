@@ -18,43 +18,33 @@ buttonCreate.addEventListener('click', updateTasksListOnPage.bind(null, listItem
 
 
 // Functions
-const getInputValue = () => taskInput.value;
-const clearInputValue = () => {
-    taskInput.value = null;
-};
-
-
 function addListItemsOnPage(listItemsArray) {
     const listElem = document.querySelector('.list');
-
+    
     // Creating new HTML list items
     const listItemElems = listItemsArray
-        .slice()
-        .sort((a, b) => ((a.done > b.done) - (b.done > a.done) || (a.date > b.date) - (b.date > a.date)))
-        .map(( {text, done }) => {   
-            const listItemElem = createHtmlListItem(text, done);
-
-            if (done) {
-                listItemElem.classList.add('list__item_selected');
-            }
+    .slice()
+    .sort((a, b) => ((a.done > b.done) - (b.done > a.done) || (a.date > b.date) - (b.date > a.date)))
+    .map(( {text, done }) => {   
+        const listItemElem = createHtmlListItem(text, done);
         
-            return listItemElem;
-        });
-
+        if (done) {
+            listItemElem.classList.add('list__item_selected');
+        }
+        
+        return listItemElem;
+    });
+    
     // Adding new list items on page
     listElem.append(...listItemElems);
-
+    
     // Adding EventListeners for new list elements
-    addListItemsEventListeners();
-}
-
-
-function addListItemsEventListeners() {
     const listItemCheckboxes = document.querySelectorAll('.list__item-checkbox');
-
-    [...listItemCheckboxes].forEach(checkbox => checkbox.addEventListener('click', updateListItem.bind(null, listItems)))
+    
+    [...listItemCheckboxes].forEach(checkbox => {
+        return checkbox.addEventListener('click', updateListItem.bind(null, listItems))
+    });
 }
-
 
 function createHtmlListItem(listItemText, checkboxState = false) {
     const checkboxElem = document.createElement('input');
@@ -70,37 +60,19 @@ function createHtmlListItem(listItemText, checkboxState = false) {
     return listItemElem;
 }
 
-
-function createNewTask(listItems) {
-    const taskName = getInputValue()
-
-    if (taskName) {
-        clearInputValue();
-
-        listItems.push({
-            text: taskName,
-            done: false,
-            date: new Date()
-        })
-    }
-}
-
-
 function updateListItem(listItems) {
-    updateListItemStatus(listItems);
-    updateListItemsOnPage(listItems);
-}
-
-
-function updateListItemStatus(listItems) {
+    // New checkbox state from page
     const checkbox = event.target;
     const listElement = checkbox.parentElement;
-
+    
+    // Update list item
     listItems.forEach(task => {
         if (task.text === listElement.innerText) {
             task.done = !task.done;
         }
     });
+
+    updateListItemsOnPage(listItems);
 }
 
 
@@ -108,13 +80,26 @@ function updateListItemsOnPage(listItems) {
     // Delete previous list items
     const listElem = document.querySelector('.list');
     listElem.innerHTML = null;
-
+    
     // Add updated list items on page
     addListItemsOnPage(listItems);
 }
 
 
 function updateTasksListOnPage(listItems) {
-    createNewTask(listItems);
+    const taskName = taskInput.value;
+    
+    if (taskName) {
+        // Clear input field
+        taskInput.value = null
+        
+        // Create new task
+        listItems.push({
+            text: taskName,
+            done: false,
+            date: new Date()
+        })
+    }
+
     updateListItemsOnPage(listItems);
 }
