@@ -32,13 +32,10 @@ html {
     margin-top: 2 * $indention;
 }
 
-.form-label {
-    margin-bottom: $indention;
-}
-
 .form-input {
     width: 100%;
     height: 32px;
+    margin-top: $indention;
     padding: $indention;
     border: $input-border;
     border-radius: $main-border-radius;
@@ -56,6 +53,7 @@ html {
     background-color: $button-background;
     border-radius: $main-border-radius;
     text-transform: uppercase;
+    color: white;
 }
 
 .error-text {

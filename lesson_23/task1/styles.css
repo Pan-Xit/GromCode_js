@@ -30,13 +30,10 @@ html {
   margin-top: 8px;
 }
 
-.form-label {
-  margin-bottom: 4px;
-}
-
 .form-input {
   width: 100%;
   height: 32px;
+  margin-top: 4px;
   padding: 4px;
   border: 1px solid #808080;
   border-radius: 4px;
@@ -54,6 +51,7 @@ html {
   background-color: #ff7f50;
   border-radius: 4px;
   text-transform: uppercase;
+  color: white;
 }
 
 .error-text {
