@@ -1,0 +1,63 @@
+@import 'variables';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: monospace;
+    font-size: $main-font-size;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    background-color: $main-background;
+}
+
+.login-form {
+    margin: auto;
+    padding: 4 * $indention;
+    width: 300px;
+    background-color: $form-background;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.form-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form-control {
+    margin-top: 2 * $indention;
+}
+
+.form-label {
+    margin-bottom: $indention;
+}
+
+.form-input {
+    width: 100%;
+    height: 32px;
+    padding: $indention;
+    border: $input-border;
+    border-radius: $main-border-radius;
+    outline: none;
+}
+
+.form-input:invalid {
+    border: $invalid-input-border;
+}
+
+.submit-button {
+    width: 100%;
+    height: 32px;
+    margin-top: 4 * $indention;
+    background-color: $button-background;
+    border-radius: $main-border-radius;
+    text-transform: uppercase;
+}
+
+.error-text {
+    color: red;
+}
