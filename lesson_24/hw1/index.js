@@ -4,7 +4,11 @@ export const getDiff = (startDate, endDate) => {
         return date.getTime() - offset * 6e4
     }
 
-    const diff = dateToUTCTimestamp(endDate) - dateToUTCTimestamp(startDate);
+    let diff = dateToUTCTimestamp(endDate) - dateToUTCTimestamp(startDate);
+    if (diff < 0) {
+        diff = -diff
+    }
+
     const time = {
         day: 1e3 * 60 * 60 * 24,
         hour: 1e3 * 60 * 60,
@@ -23,3 +27,8 @@ export const getDiff = (startDate, endDate) => {
     return `${timeDiff.day}d ${timeDiff.hour}h ${timeDiff.min}m ${timeDiff.sec}s`
 
 }
+
+// const date1 = new Date(0);
+// const date2 = new Date();
+
+// console.log(getDiff(date2, date1))
