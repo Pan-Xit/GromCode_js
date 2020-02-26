@@ -1,4 +1,4 @@
-function calc(num) {
+export function calc(num) {
     let result = num
 
     return {
