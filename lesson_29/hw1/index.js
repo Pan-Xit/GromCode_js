@@ -11,7 +11,7 @@ export function requestUserData(userId, callback) {
             name: 'John',
             age: 17,
             userId,
-            email: 'userid777@example.com',
+            email: `${userId}@example.com`,
         }) 
     }, randomInterval)
 }
