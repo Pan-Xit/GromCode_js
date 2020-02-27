@@ -1,4 +1,4 @@
-export function addImageWithPromise(url) {
+export default function addImage(url) {
     const p = new Promise((resolve, reject) => {
         const pageElem = document.querySelector('.page');
 
