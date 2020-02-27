@@ -17,4 +17,6 @@ export function addImage(url) {
             reject(new Error('Image load failed'))
         })
     })
+
+    return p
 }
