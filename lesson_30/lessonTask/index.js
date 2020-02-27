@@ -20,3 +20,6 @@ export function addImage(url) {
 
     return p
 }
+
+p.then(data => console.log(data));
+p.catch(error => console.log(error))
