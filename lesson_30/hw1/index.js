@@ -18,16 +18,14 @@ export function addImageV2(url) {
 
 // export function addImageV2(url) {
 //     const p = new Promise((resolve, reject) => {
+    //         const clb = (error, data) => {
+    //             if (error) {
+    //                 reject(new Error(error))
+    //             }
+    //             resolve(data)
+    //         }
+// 
 //         addImage(url, clb);
-
-//         const clb = (error, data) => {
-//             if (error) {
-//                 reject(new Error(error))
-//             }
-
-//             resolve(data)
-//         }
 //     })
-
 //     return p
 // }
