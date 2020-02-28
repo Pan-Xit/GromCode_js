@@ -18,8 +18,10 @@ export const addImage = (url) => {
         });
     });
 
-    return p.then(
-        res = (data) => console.log(data),
-        rej = (err) => console.log(err)
-    )
+    return p
+
+    // return p.then(
+    //     res = (data) => console.log(data),
+    //     rej = (err) => console.log(err)
+    // )
 }
