@@ -24,7 +24,7 @@ const request = (url) => new Promise(resolve => {
     });
 
 
-const getUserASAP = (userId) => {
+export const getUserASAP = (userId) => {
     const urls = servers.map(serverUrl => `${serverUrl}${userId}`)
     const requests = urls.map(url => request(url))
 
