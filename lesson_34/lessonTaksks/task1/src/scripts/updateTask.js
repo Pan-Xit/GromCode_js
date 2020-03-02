@@ -8,7 +8,7 @@ function onUpdateTask(taskId) {
     const task = taskList.find(({ id }) => id == taskId)
     
     task.done = !task.done
-    task.finishedTimestamp = task.done === true ? new Date().getTime() : null
+    task.finishedTimestamp = (task.done ? new Date().getTime() : null)
 
     updateTask(taskId, task)
         .then(() => getTaskList())
