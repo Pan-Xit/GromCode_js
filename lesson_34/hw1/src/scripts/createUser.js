@@ -25,5 +25,5 @@ const onSubmitForm = (e) => {
         })
 }
 
-loginForm.addEventListener('change', onInputChange)
+loginForm.addEventListener('input', onInputChange)
 formSubmitBtn.addEventListener('click', onSubmitForm)
