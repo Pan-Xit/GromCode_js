@@ -6,12 +6,7 @@ const formSubmitBtn = document.querySelector('.submit-button')
 const errorTextElem = document.querySelector('.error-text')
 
 const onInputChange = (e) => {
-    if (loginForm.reportValidity()) {
-        formSubmitBtn.disabled = false
-    } else if (!loginForm.reportValidity()) {
-        formSubmitBtn.disabled = true
-    }
-
+    formSubmitBtn.disabled = !loginForm.reportValidity()
     errorTextElem.textContent = ''
 }
 
