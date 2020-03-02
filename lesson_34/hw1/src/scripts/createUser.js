@@ -7,9 +7,9 @@ const errorTextElem = document.querySelector('.error-text')
 
 const onInputChange = (e) => {
     if (loginForm.reportValidity()) {
-        formSubmitBtn.removeAttribute('disabled')
+        formSubmitBtn.disabled = false
     } else if (!loginForm.reportValidity()) {
-        formSubmitBtn.setAttribute('disabled', 'disabled')
+        formSubmitBtn.disabled = true
     }
 
     errorTextElem.textContent = ''
