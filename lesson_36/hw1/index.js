@@ -8,7 +8,7 @@ export const getUsersBlogs = async (usersArr) => {
     
         return linksList
     } catch(err) {
-        console.error(err)
+        throw new Error('Failed to get user blogs: ', err)
     }
 }
 
