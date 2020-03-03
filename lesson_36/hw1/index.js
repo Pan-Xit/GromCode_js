@@ -1,4 +1,4 @@
-const getUsersBlogs = async (usersArr) => {
+export const getUsersBlogs = async (usersArr) => {
     try {
         const linksList = await Promise.all(
             usersArr.map(user => getUserData(user)
