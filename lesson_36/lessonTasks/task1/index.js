@@ -9,6 +9,7 @@ export async function fetchUser(userId) {
         const userData = await resp.json()
         return userData
     } catch(err) {
-        throw new Error('Failed')
+        Promise.reject(new Error('Failed'))
+        // throw new Error('Failed')
     }
 }
