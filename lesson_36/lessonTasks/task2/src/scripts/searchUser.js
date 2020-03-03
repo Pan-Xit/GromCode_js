@@ -22,7 +22,7 @@ const onSearchUser = async () => {
         const userRepos = await fetchUserRepos(userData.repos_url)
         renderUserRepos(userRepos)
     } catch(err) {
-        console.error(err)
+        alert('Failed to load data')
     } finally {
         hideSpinner()
     }
